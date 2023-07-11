@@ -15,7 +15,7 @@ const NowShowing = () =>{
     }
     useEffect(()=>{
         getNowShowing()
-    })
+    },[])
   
     
     return(
@@ -24,8 +24,11 @@ const NowShowing = () =>{
                 <div className="nowshowing"><h3>NOW SHOWING</h3></div>
                 <div className="row">
                     {
-                        loading ? <h1 className="loading">Loading----</h1> : nowShowings.map(showing => (
-                            <Cards poster_path={`https://image.tmdb.org/t/p/w440_and_h660_face/` + showing.poster_path} title={showing.title} release_date={showing.release_date} />
+                        loading ? <h1 className="loading">Loading...</h1> : nowShowings.map(showing => (
+                            <Cards id={showing.id}
+                                   poster_path={`https://image.tmdb.org/t/p/w440_and_h660_face/` + showing.poster_path} 
+                                   title={showing.title} 
+                                   release_date={showing.release_date} />
                         ))
                     }
                 </div>
