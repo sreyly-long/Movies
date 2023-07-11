@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
+import docter from '../assets/landing-slider-img.png'
+import edit from '../assets/edit.jpg'
+import joker from '../assets/joker.jpg'
 
 function Home() {
     const [loading, setLoading] = useState(true)
@@ -35,24 +38,30 @@ function Home() {
 
     return (
         <>
-
-
             <section className="inner_content new_index " >
-                <div id="media_v4" className="media discover container">
+                <div id="media_v4" className="media discover ">
                     <div className="column_wrapper ">
                         <div className="content_wrapper wrap">
-                            <div className="title">
-                                <h2>Welcome.</h2>
-                                <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
-                            </div>
-
-                            <div className="search" style={{ width: '100%' }}>
-                                <form id="inner_search_form" action="/search" method="get" accept-charset="utf-8">
-                                    <label style={{ width: '80%' }}>
-                                        <input dir="auto" name="query" type="text" spellcheck="false" placeholder="Search for a movie, tv show, person......" value="" />
-                                    </label>
-                                    <input type="submit" value="Search" />
-                                </form>
+                            <div id="carouselExample" className="carousel slide">
+                                <div className="carousel-inner ">
+                                    <div className="carousel-item active">
+                                        <img src={docter} alt="empty"style={{width:1510,objectFit:"cover"}}/>
+                                    </div>
+                                    <div className="carousel-item">
+                                        <img src={edit} alt=".."style={{width:1510,objectFit:"cover"}}/>
+                                    </div>
+                                    <div className="carousel-item">
+                                        <img src={joker} style={{width:1510,objectFit:"cover"}}/>
+                                    </div>
+                                </div>
+                                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span className="visually-hidden">Previous</span>
+                                </button>
+                                <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span className="visually-hidden">Next</span>
+                                </button>
                             </div>
 
                         </div>
@@ -66,8 +75,8 @@ function Home() {
                 <div className="row">
                     {
 
-                        loading ? <h1 className="loading">Loading---</h1> : nowShowing.map(showing => (
-                            <Cards poster_path={`https://image.tmdb.org/t/p/w440_and_h660_face/` + showing.poster_path} title={showing.title} release_date={showing.release_date} />
+                        loading ? <h1 className="loading">Loading...</h1> : nowShowing.map(showing => (
+                            <Cards id={showing.id} poster_path={`https://image.tmdb.org/t/p/w440_and_h660_face/` + showing.poster_path} title={showing.title} release_date={showing.release_date} />
                         ))
                     }
                 </div>
@@ -78,7 +87,7 @@ function Home() {
                 <div className="row">
                     {
                         comingSoon && comingSoon.map(coming => (
-                            <Cards poster_path={`https://image.tmdb.org/t/p/w440_and_h660_face/` + coming.poster_path} title={coming.title} release_date={coming.release_date} />
+                            <Cards id={coming.id} poster_path={`https://image.tmdb.org/t/p/w440_and_h660_face/` + coming.poster_path} title={coming.title} release_date={coming.release_date} />
                         ))
                     }
 
