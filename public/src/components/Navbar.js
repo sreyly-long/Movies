@@ -24,14 +24,10 @@ function Navbars() {
     <>
       <Navbar expand="lg" className="header sticky-top">
       <Container fluid>
-      <Navbar.Brand href="#"><img src={legend} style={{width:100}}/></Navbar.Brand>
+      <Navbar.Brand href="#"><img src={legend} style={{width:200}}/></Navbar.Brand>
         <Navbar.Toggle className='icon' aria-controls="navbarScroll " />
         <Navbar.Collapse id="navbarScroll ">
-          <Nav
-            className="me-auto my-2 my-lg-0 "
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
+          <Nav className="me-auto my-2 my-lg-0 " >
            <Nav className="me-auto">
               <Link to='/' className='hed'>Home</Link>
               <Link to='/now_showing' className='hed'>Now Showing</Link>

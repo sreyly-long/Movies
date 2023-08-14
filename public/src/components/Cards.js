@@ -4,7 +4,9 @@ function Cards({ id, poster_path, title, release_date}) {
         <>
         <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div className="card">
-                <img src={poster_path} className="card-img-top" alt="card" />                  
+                <a href={`/detail/${id}`}>
+                <img src={poster_path} className="card-img-top" alt="card" />   
+                </a>               
                 <div className="card-body">
                     <a className="card-text" href={`/detail/${id}`}>
                         {title}

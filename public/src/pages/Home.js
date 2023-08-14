@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 import docter from '../assets/landing-slider-img.png'
-import edit from '../assets/edit.jpg'
+import cave from '../assets/cave.jpg'
 import joker from '../assets/joker.jpg'
 
 function Home() {
@@ -44,13 +44,13 @@ function Home() {
                         <div id="carouselExample" className="carousel slide">
                             <div className="carousel-inner ">
                                 <div className="carousel-item active">
-                                    <img src={docter} alt="empty" />
+                                    <img src={docter} alt="empty" style={{height:740}}/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src={edit} alt="emty" />
+                                    <img src={cave} alt=".." style={{height:740}}/>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src={joker} alt="empty" />
+                                    <img src={joker} alt="empty" style={{height:740}}/>
                                 </div>
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -69,7 +69,7 @@ function Home() {
 
 
             <section className="container mt-3">
-                <div className="nowshowing"><h3>NOW SHOWING</h3></div>
+                <div className="nowshowing"><h4>NOW SHOWING</h4></div>
                 <div className="row">
                     {
 
@@ -81,7 +81,7 @@ function Home() {
             </section>
 
             <section className="container mt-3">
-                <div className="nowshowing"><h3>COMING SOON</h3></div>
+                <div className="nowshowing"><h4>COMING SOON</h4></div>
                 <div className="row">
                     {
                         comingSoon && comingSoon.map(coming => (
