@@ -17,21 +17,25 @@ const ComingSoon = () => {
         getComingSoon()
     }, [])
     return (
-        <section className="container">
-            <div className="nowshowing"><h3>COMING SOON</h3></div>
-            <div className="row">
-                {
-                    loading ? <h1 className="loading">Loading...</h1> : upComing.map(coming => (
-                        <Cards id={coming.id}
-                            poster_path={`https://image.tmdb.org/t/p/w440_and_h660_face/` + coming.poster_path}
-                            title={coming.title}
-                            release_date={coming.release_date}
-                        />
-                    ))
-                }
+        <>
+            
+            <section className="container">
+                <div className="nowshowing"><h3>COMING SOON</h3></div>
+                <div className="row">
+                    {
+                        loading ? <h1 className="loading">Loading...</h1> : upComing.map(coming => (
+                            <Cards id={coming.id}
+                                poster_path={`https://image.tmdb.org/t/p/w440_and_h660_face/` + coming.poster_path}
+                                title={coming.title}
+                                release_date={coming.release_date}
+                            />
+                        ))
+                    }
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </>
+
 
     )
 }

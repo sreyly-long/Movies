@@ -2,26 +2,26 @@ import face from '../assets/facebook.png'
 import tele from '../assets/telegram.png'
 import instar from '../assets/instargram.png'
 import docter from '../assets/landing-slider-img.png'
-import edit from '../assets/edit.jpg'
+import cave from '../assets/cave.jpg'
 import joker from '../assets/joker.jpg'
 const Contact = () => {
     return (
         <>
 
-            <section className="home-page inner_content new_index " >
+            <section className="home-page inner_content" >
                 <div id="media_v4" className="media discover ">
                     <div className="column_wrapper ">
                         <div className="content_wrapper wrap">
                             <div id="carouselExample" className="carousel slide">
                                 <div className="carousel-inner ">
                                     <div className="carousel-item active">
-                                        <img src={docter} alt="empty" />
+                                        <img src={docter} alt="empty" style={{height:740}}/>
                                     </div>
                                     <div className="carousel-item">
-                                        <img src={edit} alt=".." />
+                                        <img src={cave} alt=".." style={{height:740}}/>
                                     </div>
                                     <div className="carousel-item">
-                                        <img src={joker} />
+                                        <img src={joker} style={{height:740}}/>
                                     </div>
                                 </div>
                                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -51,7 +51,7 @@ const Contact = () => {
                                     <tr>
                                         <td><span className="lang_telephone">Telephone</span></td>
                                         <td>:</td>
-                                        <td>855 70511736</td>
+                                        <td>+855 764112513</td>
                                     </tr>
                                     <tr>
                                         <td><span className="lang_contact_hour">Contact Hour</span></td>
